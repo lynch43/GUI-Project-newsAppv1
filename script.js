@@ -1,6 +1,8 @@
 const apiKey = "b20c74e87efa4e89b14c6db7fc70e6b6";
 
 const blogContainer = document.getElementById("blog-container");
+const searchField = document.getElementById("search-input");
+const searchButton = document.getElementById("search-button");
 
 async function fetchRandomNews() {
     try{
@@ -13,6 +15,18 @@ async function fetchRandomNews() {
         return [];
     }
 }
+
+searchButton.addEventListener("click", async () => {
+    const query = searchField.ariaValueMax.trim();
+    if(query !== ""){
+        try{
+            const articles = await fetchNewsQuery(query)
+            displayBlogs(articles)
+        }catch(error){
+            console.log("Error fetching news by query", error);
+        }
+    }
+});
 
 function displayBlogs(articles) {
     blogContainer.innerHTML = "";
