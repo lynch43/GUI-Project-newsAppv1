@@ -1,10 +1,10 @@
-const apiKey = "b21c74e87efa4e89b14c6db7fc70e6b6";
+const apiKey = "b20c74e87efa4e89b14c6db7fc70e6b6";
 
 const blogContainer = document.getElementById("blog-container");
 
 async function fetchRandomNews() {
     try{
-        const apiUrl = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=b20c74e87efa4e89b14c6db7fc70e6b6`;
+        const apiUrl = `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=b20c74e87efa4e89b14c6db7fc70e6b6`;
         const response = await fetch(apiUrl);
         const data = await response.json();
         return data.articles;
@@ -39,6 +39,9 @@ function displayBlogs(articles) {
         blogCard.appendChild(img);
         blogCard.appendChild(title);
         blogCard.appendChild(description);
+        blogCard.addEventListener('click', ()=> {
+            window.open(article.url, "_blank")
+        });
         blogContainer.appendChild(blogCard);
 
     });
