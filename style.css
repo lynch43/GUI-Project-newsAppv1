@@ -31,6 +31,7 @@ nav{
     text-decoration: none;
     letter-spacing: 2px;
     font-size: 2.2rem;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 #search-input {
@@ -107,6 +108,14 @@ nav{
         width: 100%;
     }
 }
+#logo-black {
+    color: #000;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 2.2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
     
     
     

@@ -93,3 +93,21 @@ function displayBlogs(articles) {
         return [];
     }
 })();
+
+function subscriptionSuccess() {
+    var subscribeButtons = document.querySelectorAll('.subscribe-btn');
+    subscribeButtons.forEach(function(button) {
+      button.disabled = true;
+      button.innerText = 'Subscribed';
+    });
+
+    var modalBody = document.querySelector('#loginModal .modal-body');
+    modalBody.innerHTML = `
+      <div class="text-center">
+        <h5 class="modal-title">Subscription Successful</h5>
+        <p>Congratulations! You have successfully subscribed.</p>
+      </div>
+    `;
+
+    $('#successModal').modal('show');
+  }
