@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>News Api Project</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link href="custom-bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="logo" href="index.html">News.</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="donationpage1.html">
+                                    <button class="btn btn-outline-success">Subscribe</button>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="contact_us.html">
+                                    <button class="btn btn-outline-success">Contact Us</button>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-container">
+                        <input id="my-search-box" type="text" placeholder="Search news here..">
+                        <button id="search-button">Search</button>
+                    </div>
+                </div>
+            </nav>          
+        </div>
+       <p>
+        <h1 id="find">Find us</h1>
+       </p> 
+       <div class="col-sm border border-primary rounded p-3 d-flex flex-column">
+        
+        <p id="location" style="text-align: center;">ATU, Dublin Road<br> Galway<br>H91 T8NW<br> Ireland</p> 
+        <div style="margin: auto;" ><a href="https://facebook.com" target=”_blank” class="fa fa-facebook"></a>
+        <a href="https://twitter.com" class="fa fa-twitter" target=”_blank”></a>
+        <a href="https://instagram.com" class="fa fa-instagram" target=”_blank”></a>
+        <a href="https://linkedin.com" class="fa fa-linkedin" target=”_blank”></a></div> <br>
+         <iframe style="margin: auto;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19084.958432541207!2d-8.9960732!3d53.2784315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485b9132cb2e133f%3A0x5a81260c20e02143!2sATU%20Galway%20City!5e0!3m2!1sen!2sie!4v1713814602776!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe></div>
+        </div>
+        <p>
+            <h1 id="find">Contact Form</h1>
+           </p> 
+           <div class="container_contact" class="col-sm border border-primary rounded p-3 d-flex flex-column">
+            <form  method="get">
+              <label>First Name</label>
+              <input id="fname" type="text" placeholder="Your name..">
+            <br><br>
+              <label for="lname">Last Name</label>
+              <input id="lname" type="text"placeholder="Your last name..">
+                <br><br>
+
+                <label>Email</label>
+                <input id="email"  type="email" placeholder="Your email here...">
+                 
+          <br><br>
+              <textarea id="box" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          <br><br>
+          <button type="submit" onclick="return contact_form_check();" class="btn btn-outline-success btn-block btn-lg subscribe-btn">Subscribe</button>
+            </form>
+          </div>   
+        </div>
+        <br><br>
+
+        <script src="script.js"></script>
+    </body>
+</html>
