@@ -111,3 +111,40 @@ function subscriptionSuccess() {
 
     $('#successModal').modal('show');
   }
+
+function contact_form_check()
+  {
+      var searchtext = document.getElementById("fname").value;
+      if(searchtext=='')
+      {
+          alert('Enter your First Name!');
+          return false;
+      }
+
+      var searchtext2 = document.getElementById("lname").value;
+      if(searchtext2=='')
+      {
+          alert('Enter your Second Name!');
+          return false;
+      }
+
+      var searchtext3 = document.getElementById("email").value;
+      if(searchtext3=='')
+      {
+          alert('Enter your Email!');
+          return false;
+      }
+
+      var searchtext4 = document.getElementById("box").value;
+      if(searchtext4=='')
+      {
+          alert('Enter your subject details!');
+          return false;
+      }
+      else{
+        alert('Form submitted!')
+      }
+    
+      
+
+  }
