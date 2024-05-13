@@ -94,14 +94,14 @@ function displayBlogs(articles) {
     }
 })();
 
-function subscriptionSuccess() {
-    var subscribeButtons = document.querySelectorAll('.subscribe-btn');
-    subscribeButtons.forEach(function(button) {
+function subscriptionSuccess() { 
+    var subscribeButtons = document.querySelectorAll('.subscribe-btn'); // https://www.w3schools.com/jsref/met_element_queryselectorall.asp
+    subscribeButtons.forEach(function(button) { // Most of the code to disable buttons came from here: https://stackoverflow.com/questions/48087480/how-to-disable-all-buttons-under-a-class-in-html-using-javascript
       button.disabled = true;
       button.innerText = 'Subscribed';
     });
 
-    var modalBody = document.querySelector('#loginModal .modal-body');
+    var modalBody = document.querySelector('#loginModal .modal-body'); // stackoverflow.com/questions/46868388/difference-between-queryselector-and-queryselectorall0
     modalBody.innerHTML = `
       <div class="text-center">
         <h5 class="modal-title">Subscription Successful</h5>
@@ -109,7 +109,7 @@ function subscriptionSuccess() {
       </div>
     `;
 
-    $('#successModal').modal('show');
+    $('#successModal').modal('show'); // From here: https://stackoverflow.com/questions/12286332/twitter-bootstrap-remote-modal-shows-same-content-every-time, I don't fully know what that code means but it worked.
   }
 
 function contact_form_check()
